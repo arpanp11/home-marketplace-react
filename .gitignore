@@ -25,3 +25,8 @@ yarn-error.log*
 #for dev
 src/firebase.config.js
 .env
+
+#for firebaser storage issue
+storage.rules
+.firebaserc
+firebase.json
