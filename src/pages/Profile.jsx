@@ -102,6 +102,10 @@ function Profile() {
     }
   };
 
+  const editHandler = (listingId) => {
+    navigate(`/edit-listing/${listingId}`);
+  };
+
   return (
     <div className='profile'>
       <header className='profileHeader'>
@@ -163,6 +167,7 @@ function Profile() {
                   listing={listing.data}
                   id={listing.id}
                   onDelete={() => deleteHandler(listing.id)}
+                  onEdit={() => editHandler(listing.id)}
                 />
               ))}
             </ul>
