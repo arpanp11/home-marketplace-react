@@ -12,6 +12,9 @@ import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import ForgotPassword from './pages/ForgotPassword';
 import CreatListing from './pages/CreatListing';
+import Listing from './pages/Listing';
+import Contact from './pages/Contact';
+import EditListings from './pages/EditListings';
 
 function App() {
   return (
@@ -29,6 +32,12 @@ function App() {
           <Route path='/sign-up' element={<SignUp />} />
           <Route path='/forgot-password' element={<ForgotPassword />} />
           <Route path='/create-listing' element={<CreatListing />} />
+          <Route path='/edit-listing/:listingId' element={<EditListings />} />
+          <Route
+            path='/category/:categoryName/:listingId'
+            element={<Listing />}
+          />
+          <Route path='/contact/:landlordId' element={<Contact />} />
         </Routes>
         {/* navbar */}
         <Navbar />
